@@ -20,7 +20,7 @@ public class DiffieSparkRouter {
 
     private ConcurrentHashMap<String, KeyPair> keyPairConcurrentHashMap;
 
-    DiffieSparkRouter() {
+    public DiffieSparkRouter() {
 
         secureRandom = new SecureRandom();
         hashMap = new ConcurrentHashMap<>();
