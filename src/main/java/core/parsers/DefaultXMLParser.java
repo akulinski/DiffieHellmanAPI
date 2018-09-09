@@ -13,16 +13,49 @@ import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 
-public class DefaultXMLParser implements IXMLParser<LinkedList<String>> {
+public class DefaultXMLParser implements IXMLParser<String> {
 
-    String path;
-    File fXmlFile;
-    DocumentBuilderFactory documentBuilderFactory;
-    DocumentBuilder documentBuilder;
-    Document document;
-    NodeList nodeList;
+    private String path;
+    private File fXmlFile;
+    private DocumentBuilderFactory documentBuilderFactory;
+    private DocumentBuilder documentBuilder;
+    private Document document;
 
-    LinkedList<String> addressesList;
+    public String getPath() {
+        return path;
+    }
+
+    public File getfXmlFile() {
+        return fXmlFile;
+    }
+
+    public DocumentBuilderFactory getDocumentBuilderFactory() {
+        return documentBuilderFactory;
+    }
+
+    public DocumentBuilder getDocumentBuilder() {
+        return documentBuilder;
+    }
+
+    public Document getDocument() {
+        return document;
+    }
+
+    public NodeList getNodeList() {
+        return nodeList;
+    }
+
+    public LinkedList<String> getAddressesList() {
+        return addressesList;
+    }
+
+    private NodeList nodeList;
+
+    private LinkedList<String> addressesList;
+
+    public DefaultXMLParser(){
+        this.addressesList = new LinkedList<>();
+    }
 
     public void loadResource(String path) {
         this.path = path;
