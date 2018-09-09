@@ -53,7 +53,7 @@ public class DefaultXMLParser implements IXMLParser<String> {
 
     private LinkedList<String> addressesList;
 
-    public DefaultXMLParser(){
+    public DefaultXMLParser() {
         this.addressesList = new LinkedList<>();
     }
 
